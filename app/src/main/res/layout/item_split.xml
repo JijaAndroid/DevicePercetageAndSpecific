@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_marginTop="8dp" android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content" android:id="@+id/guideline4"
+                                                android:orientation="vertical"
+                                                app:layout_constraintGuide_percent="0.50"/>
+    <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp" app:srcCompat="@drawable/unlock"
+            android:id="@+id/imgLockUnLock" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="Ravindra Suryawanshi"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="0dp" app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/txtRoomMateName" app:layout_constraintStart_toEndOf="@+id/imgLockUnLock"
+            android:layout_marginTop="8dp" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4" android:layout_marginEnd="8dp"
+            android:textSize="12sp" android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:id="@+id/clSplitAmount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4">
+
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:id="@+id/edtSplitSpecificAmount"
+                android:inputType="numberDecimal"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgMinus"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imgPlus"
+                android:layout_marginEnd="8dp" tools:text="$00.00" android:textSize="12sp"/>
+        <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp" app:srcCompat="@drawable/minus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/imgMinus"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+
+        <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp" app:srcCompat="@drawable/plus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/imgPlus"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
